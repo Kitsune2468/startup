@@ -2,7 +2,7 @@
 
 [My Notes](notes.md)
 
-A brief description of the application here. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+Have you ever wanted to play a game with a friend, but only had a few minutes to do so? Web-Tac-Toe is your solution! Web-Tac-Toe is a tic-tac-toe application that allows for quick games of tic-tac-toe between friends. Join a room with a friend and either play one quick game, or string several games back to back. The room will keep track of how many wins each player has so players can have proof of who is truly the tic-tac-toe master.
 
 
 > [!NOTE]
@@ -65,10 +65,10 @@ I am going to use the required technologies in the following ways.
 - **CSS** - Application styling that looks good on different screen sizes, uses good whitespace, color choice and contrast. 
 - **React** - Provides login, making moves, displaying win/loss record, backend endpoint calls, and use of React for routing and components.
 - **Service** - Backend service endpoints for:
- - Register/Login/Logout users
- - Create/Join/Delete rooms
- - Making moves
- - Randomizing color (Third Party)
+  - Register/Login/Logout users
+  - Create/Join/Delete rooms
+  - Making moves
+  - Randomizing color (Third Party)
 - **DB/Login** - Store users, rooms, and games in database. Register and login/logout users. Credentials securely stored in database. Can't make or join rooms, or make moves unless authenticated.
 - **WebSocket** - As moves are made or colors are randomized, they are broadcast to all other users.
 
