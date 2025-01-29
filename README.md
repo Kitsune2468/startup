@@ -20,9 +20,9 @@ For this deliverable I did the following. I checked the box `[x]` and added a de
 
 - [x] Proper use of Markdown
 - [x] A concise and compelling elevator pitch
-- [ ] Description of key features
-- [ ] Description of how you will use each technology
-- [ ] One or more rough sketches of your application. Images must be embedded in this file using Markdown image references.
+- [x] Description of key features
+- [x] Description of how you will use each technology
+- [x] One or more rough sketches of your application. Images must be embedded in this file using Markdown image references.
 
 ### Elevator pitch
 
@@ -61,12 +61,16 @@ sequenceDiagram
 
 I am going to use the required technologies in the following ways.
 
-- **HTML** - Description here
-- **CSS** - Description here
-- **React** - Description here
-- **Service** - Description here
-- **DB/Login** - Description here
-- **WebSocket** - Description here
+- **HTML** - Uses correct HTML structure for application. Three HTML pages. One for login/register, one for home/viewing rooms, and one for playing game inside a room.
+- **CSS** - Application styling that looks good on different screen sizes, uses good whitespace, color choice and contrast. 
+- **React** - Provides login, making moves, displaying win/loss record, backend endpoint calls, and use of React for routing and components.
+- **Service** - Backend service endpoints for:
+ - Register/Login/Logout users
+ - Create/Join/Delete rooms
+ - Making moves
+ - Randomizing color (Third Party)
+- **DB/Login** - Store users, rooms, and games in database. Register and login/logout users. Credentials securely stored in database. Can't make or join rooms, or make moves unless authenticated.
+- **WebSocket** - As moves are made or colors are randomized, they are broadcast to all other users.
 
 ## 🚀 AWS deliverable
 
