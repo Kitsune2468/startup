@@ -50,9 +50,12 @@ sequenceDiagram
 
 ### Key features
 
-- Describe your key feature
-- Describe your key feature
-- Describe your key feature
+- Secure login over HTTPS
+- Ability to create and join rooms
+- Ability to make Tic-Tac-Toe moves when it is your turn
+- Total wins and losses shown for both users in the room displayed in realtime
+- Ability for users to randomize their color
+- Current game and wins/losses persistently stored
 
 ### Technologies
 
