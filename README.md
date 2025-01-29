@@ -1,4 +1,4 @@
-# Your startup name here
+# Web-Tac-Toe
 
 [My Notes](notes.md)
 
@@ -32,7 +32,7 @@ Have you ever wanted to play a game with a friend, but only had a few minutes to
 
 ![Design image](DesignImage.png)
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+Three HTML pages. One for login/register, one for home/viewing rooms, and one for playing game inside a room. Users will be able to create and join rooms. Inside these rooms they will be able to play tic-tac-toe by making moves. They will also be able to randomize their own color on both the homepage and inside of a room. The win/loss record of the room will be shown in both the homepage list of rooms and the room itself.
 
 ```mermaid
 sequenceDiagram
