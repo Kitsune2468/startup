@@ -1,6 +1,6 @@
 # CS 260 Notes
 
-[My startup - Simon](https://simon.cs260.click)
+[My startup - WebTacToe](https://mfcs260.click)
 
 ## Helpful links
 
@@ -10,18 +10,22 @@
 
 ## AWS
 
-My IP address is: 54.81.96.130
-Launching my AMI I initially put it on a private subnet. Even though it had a public IP address and the security group was right, I wasn't able to connect to it.
+My IP address is: 54.235.222.79
+Didn't initially make it an elastic IP address, but when I was setting up DNS stuff I realized I probably should so I did.
 
 ## Caddy
 
-No problems worked just like it said in the [instruction](https://github.com/webprogramming260/.github/blob/main/profile/webServers/https/https.md).
+[instruction](https://github.com/webprogramming260/.github/blob/main/profile/webServers/https/https.md).
+
+Had some issues editing Caddyfile, but eventually got it to work. Make sure to know all the vim commands lol
 
 ## HTML
 
-This was easy. I was careful to use the correct structural elements such as header, footer, main, nav, and form. The links between the three views work great using the `a` element.
+"This was easy. I was careful to use the correct structural elements such as header, footer, main, nav, and form. The links between the three views work great using the `a` element.
 
-The part I didn't like was the duplication of the header and footer code. This is messy, but it will get cleaned up when I get to React.
+The part I didn't like was the duplication of the header and footer code. This is messy, but it will get cleaned up when I get to React."
+
+We will see, working on it now. Getting a posix compliant shell working without a guide was horrible, but I eventually got it to work. Then I had issues running the deployFiles.sh because of some newline shenanigans. In the future if I run into the same problem, I'll use: "sed -i 's/\r//' deployFiles.sh" before running the deploy.
 
 ## CSS
 
