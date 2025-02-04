@@ -21,11 +21,7 @@ Had some issues editing Caddyfile, but eventually got it to work. Make sure to k
 
 ## HTML
 
-"This was easy. I was careful to use the correct structural elements such as header, footer, main, nav, and form. The links between the three views work great using the `a` element.
-
-The part I didn't like was the duplication of the header and footer code. This is messy, but it will get cleaned up when I get to React."
-
-We will see, working on it now. Getting a posix compliant shell working without a guide was horrible, but I eventually got it to work. Then I had issues running the deployFiles.sh because of some newline shenanigans. In the future if I run into the same problem, I'll use: "sed -i 's/\r//' deployFiles.sh" before running the deploy.
+We will see, working on it now. Getting a posix compliant shell working without a guide was horrible, but I eventually got it to work. Then I had issues running the deployFiles.sh because of some newline shenanigans. In the future if I run into the same problem, I'll use: "sed -i 's/\r//' deployFiles.sh" before running the deploy. Also, for cygwin, use "cd " /cygdrive/c/Users/$USER" " to get to main directory.
 
 ## CSS
 

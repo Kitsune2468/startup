@@ -82,15 +82,15 @@ For this deliverable I did the following. I checked the box `[x]` and added a de
 
 For this deliverable I did the following. I checked the box `[x]` and added a description for things I completed.
 
-- [ ] **HTML pages** - I did not complete this part of the deliverable.
-- [ ] **Proper HTML element usage** - I did not complete this part of the deliverable.
-- [ ] **Links** - I did not complete this part of the deliverable.
-- [ ] **Text** - I did not complete this part of the deliverable.
-- [ ] **3rd party API placeholder** - I did not complete this part of the deliverable.
-- [ ] **Images** - I did not complete this part of the deliverable.
-- [ ] **Login placeholder** - I did not complete this part of the deliverable.
-- [ ] **DB data placeholder** - I did not complete this part of the deliverable.
-- [ ] **WebSocket placeholder** - I did not complete this part of the deliverable.
+- [x] **HTML pages** - Used 2 HTML pages that represent login/home, and rooms/play.
+- [x] **Proper HTML element usage** - Yup!
+- [x] **Links** - Used to move to a room and to return to home/login page (index.html).
+- [x] **Text** - Used for title and author at bottom. Also used for scoreboard and temporarily for game board.
+- [x] **3rd party API placeholder** - Will be used in room.html to randomize player color.
+- [x] **Images** - I could not think of anywhere it would be necessary to use an image, so I didn't implement one. I might go back and add one when I get more into styling if I feel it is necessary.
+- [x] **Login placeholder** - Login from index.html. Will be able to see your available rooms.
+- [x] **DB data placeholder** - Database data will be used for scoreboard/board in room.html and for your rooms on index.html.
+- [x] **WebSocket placeholder** - Connect to websocket when joining a room. Making a move and updating scoreboard will use WebSocket connection.
 
 ## 🚀 CSS deliverable
 
