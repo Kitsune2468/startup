@@ -61,7 +61,7 @@ sequenceDiagram
 
 I am going to use the required technologies in the following ways.
 
-- **HTML** - Uses correct HTML structure for application. Three HTML pages. One for login/register, one for home/viewing rooms, and one for playing game inside a room.
+- **HTML** - Uses correct HTML structure for application. Two HTML pages. One for login/register/home/viewing rooms, and one for playing game inside a room.
 - **CSS** - Application styling that looks good on different screen sizes, uses good whitespace, color choice and contrast. 
 - **React** - Provides login, making moves, displaying win/loss record, backend endpoint calls, and use of React for routing and components.
 - **Service** - Backend service endpoints for:
