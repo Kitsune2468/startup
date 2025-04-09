@@ -100,8 +100,8 @@ For this deliverable I did the following. I checked the box `[x]` and added a de
 - [ ] **Navigation elements** - I did not complete this part of the deliverable.
 - [x] **Responsive to window resizing** - Done! It was a nightmare to get the game board to resize properly, but after some investigating into css units and background image stuff I was able to get it working.
 - [ ] **Application elements** - I did not complete this part of the deliverable.
-- [ ] **Application text content** - Consistent font. 
-- [ ] **Application images** - I did not complete this part of the deliverable.
+- [x] **Application text content** - A bit of a basic font, but consistent throughout the application. 
+- [x] **Application images** - Made and used a background image for the game board.
 
 ## 🚀 React part 1: Routing deliverable
 
