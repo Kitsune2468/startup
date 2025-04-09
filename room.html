@@ -43,33 +43,31 @@
       </section>
       <section>
         <div style="width: 100%">
-            <div style="width: 50%; float: left;"> 
+            <div class="game"> 
                 <form method="get" action="room.html">
                     <div class="board">
-                        <table>
+                        <table class="board-grid">
                             <tr>
-                                <td class="board-item"><button type="submit" class="btn btn-primary">1</button></td>
-                                <td class="board-item"><button type="submit" class="btn btn-primary">2</button></td>
-                                <td class="board-item"><button type="submit" class="btn btn-primary">3</button></td>
+                                <td><button type="submit" class="btn btn-secondary board-button">1</button></td>
+                                <td><button type="submit" class="btn btn-secondary board-button">2</button></td>
+                                <td><button type="submit" class="btn btn-secondary board-button">3</button></td>
                             </tr>
                             <tr>
-                                <td class="board-item"><button type="submit" class="btn btn-primary">4</button></td>
-                                <td class="board-item"><button type="submit" class="btn btn-primary">5</button></td>
-                                <td class="board-item"><button type="submit" class="btn btn-primary">6</button></td>
+                                <td><button type="submit" class="btn btn-secondary board-button">4</button></td>
+                                <td><button type="submit" class="btn btn-secondary board-button">5</button></td>
+                                <td><button type="submit" class="btn btn-secondary board-button">6</button></td>
                             </tr>
                             <tr>
-                                <td class="board-item"><button type="submit" class="btn btn-primary">7</button></td>
-                                <td class="board-item"><button type="submit" class="btn btn-primary">8</button></td>
-                                <td class="board-item"><button type="submit" class="btn btn-primary">9</button></td>
+                                <td><button type="submit" class="btn btn-secondary board-button">7</button></td>
+                                <td><button type="submit" class="btn btn-secondary board-button">8</button></td>
+                                <td><button type="submit" class="btn btn-secondary board-button">9</button></td>
                             </tr>
                         </table>
                     </div>
                     <div>
                         <button type="submit" class="btn btn-primary">Make Move (WebSocket Data Here)</button>
                     </div>
-                    <div>
-                        <button type="submit" class="btn btn-primary">Randomize Your Color (Third Party API Here)</button>
-                    </div>
+                    
                 </form>
             </div>
             <div class="scoreboard"> 
@@ -92,7 +90,9 @@
                         <td class="win-loss">Loses: 1</td>
                     </tr>
                 </table>
-                
+                <div>
+                  <button type="submit" class="btn btn-primary">Randomize Your Color (Third Party API Here)</button>
+                </div>
                 
             </div>
         </div>

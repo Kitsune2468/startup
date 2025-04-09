@@ -27,11 +27,11 @@ We will see, working on it now. Getting a posix compliant shell working without 
 
 Looking through the simon-css is very interesting. I've always wondered how html & css worked together, so it's cool to learn about it and mess around with it.
 
-This took a couple hours to get it how I wanted. It was important to make it responsive and Bootstrap helped with that. It looks great on all kinds of screen sizes.
+This took a couple hours to get it how I wanted (true). It was important to make it responsive and Bootstrap helped with that. It looks great on all kinds of screen sizes.
 
-Bootstrap seems a bit like magic. It styles things nicely, but is very opinionated. You either do, or you do not. There doesn't seem to be much in between.
+Trying to get the game board to style correctly was a nightmare, but worked eventually.
 
-I did like the navbar it made it super easy to build a responsive header.
+I did like the navbar it made it super easy to build a responsive header. (Also true)
 
 ```html
       <nav class="navbar navbar-expand-lg bg-body-tertiary">

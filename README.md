@@ -96,11 +96,11 @@ For this deliverable I did the following. I checked the box `[x]` and added a de
 
 For this deliverable I did the following. I checked the box `[x]` and added a description for things I completed.
 
-- [ ] **Header, footer, and main content body** - I did not complete this part of the deliverable.
+- [x] **Header, footer, and main content body** - Done! Not sure if I'm supposed to include both the source and github in the footer, but I did it anyways just in case.
 - [ ] **Navigation elements** - I did not complete this part of the deliverable.
-- [ ] **Responsive to window resizing** - I did not complete this part of the deliverable.
+- [x] **Responsive to window resizing** - Done! It was a nightmare to get the game board to resize properly, but after some investigating into css units and background image stuff I was able to get it working.
 - [ ] **Application elements** - I did not complete this part of the deliverable.
-- [ ] **Application text content** - I did not complete this part of the deliverable.
+- [ ] **Application text content** - Consistent font. 
 - [ ] **Application images** - I did not complete this part of the deliverable.
 
 ## 🚀 React part 1: Routing deliverable
