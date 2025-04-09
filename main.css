@@ -46,6 +46,10 @@ footer .footer-item {
   padding: 0 1em;
 }
 
+body .title {
+  height: 20%;
+}
+
 @media (max-height: 600px) {
   header {
     display: none;

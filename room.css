@@ -1,11 +1,30 @@
 .board {
-    width: 40%;
-    height: 40%;
+    align-content:space-between;
+    justify-content:space-between;
+    padding: 10em;
+    width: 50vw;
+    height: 50vw;
     background-image: url("board.png");
-    background-size: auto;
+    background-size:contain;
+    background-repeat: no-repeat;
+}
+
+.board-item {
+    
 }
 
 .scoreboard {
-    align-content: center;
+    align-content:center;
     margin-left: 60%;
+}
+
+.win-loss {
+    padding: 0.3em;
+}
+
+section:nth-child(1) {
+    flex:1;
+}
+section:nth-child(2) {
+    flex:4;
 }
