@@ -1,5 +1,5 @@
 # Web-Tac-Toe
-
+(Note: This is my second time taking this class. I am keeping the same repo and will update/change things as we go through the course! If this is a problem let me know.)
 [My Notes](notes.md)
 
 Have you ever wanted to play a game with a friend, but only had a few minutes to do so? Web-Tac-Toe is your solution! Web-Tac-Toe is a tic-tac-toe application that allows for quick games of tic-tac-toe between friends. Join a room with a friend and either play one quick game, or string several games back to back. The room will keep track of how many wins each player has so players can have proof of who is truly the tic-tac-toe master.
