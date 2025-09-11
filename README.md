@@ -72,6 +72,7 @@ I am going to use the required technologies in the following ways.
   - Randomizing color (Third Party)
 - **Database** - Store users, rooms, and games in database. Register and login/logout users. Credentials securely stored in database. Can't make or join rooms, or make moves unless authenticated.
 - **WebSocket** - As moves are made or colors are randomized, they are broadcast to all other users.
+
 (Updated this section as of 9/10/2025)
 
 ## 🚀 AWS deliverable
