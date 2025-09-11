@@ -65,13 +65,14 @@ I am going to use the required technologies in the following ways.
 - **HTML** - Uses correct HTML structure for application. Two HTML pages. One for login/register/home/viewing rooms, and one for playing game inside a room.
 - **CSS** - Application styling that looks good on different screen sizes, uses good whitespace, color choice and contrast. 
 - **React** - Provides login, making moves, displaying win/loss record, backend endpoint calls, and use of React for routing and components.
-- **Service** - Backend service endpoints for:
+- **Web Service** - Backend service endpoints for:
   - Register/Login/Logout users
   - Create/Join/Delete rooms
   - Making moves
   - Randomizing color (Third Party)
-- **DB/Login** - Store users, rooms, and games in database. Register and login/logout users. Credentials securely stored in database. Can't make or join rooms, or make moves unless authenticated.
+- **Database** - Store users, rooms, and games in database. Register and login/logout users. Credentials securely stored in database. Can't make or join rooms, or make moves unless authenticated.
 - **WebSocket** - As moves are made or colors are randomized, they are broadcast to all other users.
+(Updated this section as of 9/10/2025)
 
 ## 🚀 AWS deliverable
 
