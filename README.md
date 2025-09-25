@@ -95,6 +95,8 @@ For this deliverable I did the following. I checked the box `[x]` and added a de
 - [x] **DB data placeholder** - Database data will be used for scoreboard/board in room.html and for your rooms on index.html.
 - [x] **WebSocket placeholder** - Connect to websocket when joining a room. Making a move and updating scoreboard will use WebSocket connection.
 
+(Made sure this section was still working correctly, and redeployed Simon and my startup pages. - 9/10/2025)
+
 ## 🚀 CSS deliverable
 
 For this deliverable I did the following. I checked the box `[x]` and added a description for things I completed.

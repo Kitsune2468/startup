@@ -23,6 +23,8 @@ Had some issues editing Caddyfile, but eventually got it to work. Make sure to k
 
 We will see, working on it now. Getting a posix compliant shell working without a guide was horrible, but I eventually got it to work. Then I had issues running the deployFiles.sh because of some newline shenanigans. In the future if I run into the same problem, I'll use: "sed -i 's/\r//' deployFiles.sh" before running the deploy. Also, for cygwin, use "cd " /cygdrive/c/Users/$USER" " to get to main directory.
 
+New: Nothing much here. Since taking this class last time, I have taken a class that has had me configure a posix compliant shell, and it seems to have fixed/simplified some of the old problems I had from last time.
+
 ## CSS
 
 Looking through the simon-css is very interesting. I've always wondered how html & css worked together, so it's cool to learn about it and mess around with it.
