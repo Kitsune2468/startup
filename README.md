@@ -101,10 +101,10 @@ For this deliverable I did the following. I checked the box `[x]` and added a de
 
 For this deliverable I did the following. I checked the box `[x]` and added a description for things I completed.
 
-- [x] **Header, footer, and main content body** - Done! Not sure if I'm supposed to include both the source and github in the footer, but I did it anyways just in case.
-- [ ] **Navigation elements** - Done! I removed the underline, and justified the items inside the navbar so they change when the window is re-sized.
-- [x] **Responsive to window resizing** - Done! It was a nightmare to get the game board to resize properly, but after some investigating into css units and background image stuff I was able to get it working.
-- [ ] **Application elements** - I did not complete this part of the deliverable.
+- [x] **Header, footer, and main content body** - Not sure if I'm supposed to include both the source (simon) and github in the footer, but I did it anyways just in case.
+- [x] **Navigation elements** - I removed the underline, and justified the items inside the navbar so they change when the window is re-sized.
+- [x] **Responsive to window resizing** - It was a nightmare to get the game board to resize properly, but after some investigating into css units and background image stuff I was able to get it working.
+- [x] **Application elements** - Good contrast and whitespace.
 - [x] **Application text content** - A bit of a basic font, but consistent throughout the application. 
 - [x] **Application images** - Made and used a background image for the game board.
 
