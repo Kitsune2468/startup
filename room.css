@@ -4,6 +4,7 @@
 }
 
 .player1 {
+
     color: var(--player1Color);
 }
 
@@ -12,46 +13,74 @@
 }
 
 .game {
-    margin-left: 5%;
+    justify-self: center;
     width: 50%; 
+    height: 100%;
     float: left;
+    padding-bottom:2%;
+}
+
+.room-title {
+    width: 100%;
+    height: 10%
+}
+
+.body-section {
+    width: 100%;
+    height: 90%;
 }
 
 .board {
-    align-content:center;
-    justify-content:center;
-    width: 53vmin;
-    height: 50vmin;
+    justify-self: center;
     background-image: url("board.png");
-    background-size:contain;
+    background-position-x: 1px;
+    background-size: contain;
     background-repeat: no-repeat;
+    aspect-ratio: 1 / 1;
+    width: 80%;
+    height: 80%;
+    min-width: 200px;
+    min-height: 200px;
+    max-height: 80vmin;
+    max-width: 80vmin;
 }
 
 .board-grid {
-    align-content:center;
-    justify-content:center;
-    height: 95%;
-    width: 93%;
+    align-content: center;
+    justify-content: center;
+    height: 100%;
+    width: 100%;
 }
 
 .board-button {
-    height: 75%;
-    width: 75%;
+    height: 80%;
+    width: 80%;
 }
-
+.scoreboard-title {
+    justify-self: center;
+    width: 75%;
+    padding-bottom: 0.25em;
+    border-bottom: solid rgb(235, 235, 235) ;
+}
 .scoreboard {
     align-content:center;
-    margin-left: 60%;
+    margin-left: 50%;
+}
+
+.scoreboard-info {
+    width:100%;
+    height:100%;
 }
 
 .win-loss {
-    padding: 0.5em 1em;
+    padding: 0.5em 2em;
 }
 
 section:nth-child(1) {
     flex:1;
     align-content: center;
 }
+
 section:nth-child(2) {
     flex:4;
 }

@@ -24,8 +24,8 @@
     <header class="container-fluid">
       <!-- Nav -->
       <nav class="navbar fixed-top navbar-dark">
-        <a  class="navbar-brand" href="#">Web-Tac-Toe<sup>&reg;</sup></a>
-        <menu>
+        <a  class="navbar-brand" href="index.html">Web-Tac-Toe</a>
+        <menu class="nav-menu">
           <li class="nav-item">
             <a class="nav-link" href="index.html">Home</a>
           </li>
@@ -37,74 +37,70 @@
     </header>
 
     <!--  MAIN  -->
-    <main class="container-fluid bg-secondary text-center">
-      <section>
+    <main class="container-fluid bg-secondary text-center outline">
+      <section class="room-title">
         <h2>PLACEHOLDER Room 1</h2>
       </section>
-      <section>
-        <div style="width: 100%">
-            <div class="game"> 
-                <form method="get" action="room.html">
-                    <div class="board">
-                        <table class="board-grid">
-                            <tr>
-                                <td><button type="submit" class="btn btn-secondary board-button">1</button></td>
-                                <td><button type="submit" class="btn btn-secondary board-button">2</button></td>
-                                <td><button type="submit" class="btn btn-secondary board-button">3</button></td>
-                            </tr>
-                            <tr>
-                                <td><button type="submit" class="btn btn-secondary board-button">4</button></td>
-                                <td><button type="submit" class="btn btn-secondary board-button">5</button></td>
-                                <td><button type="submit" class="btn btn-secondary board-button">6</button></td>
-                            </tr>
-                            <tr>
-                                <td><button type="submit" class="btn btn-secondary board-button">7</button></td>
-                                <td><button type="submit" class="btn btn-secondary board-button">8</button></td>
-                                <td><button type="submit" class="btn btn-secondary board-button">9</button></td>
-                            </tr>
-                        </table>
-                    </div>
-                    <div>
-                        <button type="submit" class="btn btn-primary">Make Move (WebSocket Data Here)</button>
-                    </div>
-                    
-                </form>
-            </div>
-            <div class="scoreboard"> 
-                <h1>Scoreboard: (WebSocket Data Here)</h1>
-                <table>
-                    <tr>
-                        <td class="player1">PLACEHOLDER Player 1:</td>
-                        <td class="win-loss">Wins: 1</td>
-                    </tr>
-                    <tr>
-                        <td></td>
-                        <td class="win-loss">Loses: 2</td>
-                    </tr>
-                    <tr>
-                        <td class="player2">PLACEHOLDER Player 2:</td>
-                        <td class="win-loss">Wins: 2</td>
-                    </tr>
-                    <tr>
-                        <td></td>
-                        <td class="win-loss">Loses: 1</td>
-                    </tr>
-                </table>
+      <section class="body-section">
+        <div class="game"> 
+            <form method="get" action="room.html">
+                <div class="board">
+                    <table class="board-grid">
+                        <tr>
+                            <td><button type="submit" class="btn btn-secondary board-button">1</button></td>
+                            <td><button type="submit" class="btn btn-secondary board-button">2</button></td>
+                            <td><button type="submit" class="btn btn-secondary board-button">3</button></td>
+                        </tr>
+                        <tr>
+                            <td><button type="submit" class="btn btn-secondary board-button">4</button></td>
+                            <td><button type="submit" class="btn btn-secondary board-button">5</button></td>
+                            <td><button type="submit" class="btn btn-secondary board-button">6</button></td>
+                        </tr>
+                        <tr>
+                            <td><button type="submit" class="btn btn-secondary board-button">7</button></td>
+                            <td><button type="submit" class="btn btn-secondary board-button">8</button></td>
+                            <td><button type="submit" class="btn btn-secondary board-button">9</button></td>
+                        </tr>
+                    </table>
+                </div>
                 <div>
-                  <button type="submit" class="btn btn-primary">Randomize Your Color (Third Party API Here)</button>
+                    <button type="submit" class="btn btn-primary">Make Move (WebSocket)</button>
                 </div>
                 
+            </form>
+        </div>
+        <div class="scoreboard"> 
+            <h1 class="scoreboard-title">Scoreboard (WebSocket)</h1>
+            <table class="scoreboard-info">
+                <tr>
+                    <td>PLACEHOLDER <span class="player1">Player 1</span>:</td>
+                    <td class="win-loss">Wins: 1</td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td class="win-loss">Loses: 2</td>
+                </tr>
+                <tr>
+                    <td>PLACEHOLDER <span class="player2">Player 2</span>:</td>
+                    <td class="win-loss">Wins: 2</td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td class="win-loss">Loses: 1</td>
+                </tr>
+            </table>
+            <div>
+              <button type="submit" class="btn btn-primary">Randomize Your Color (3rd Party API)</button>
             </div>
         </div>
       </section>
     </main>
 
     <!--  FOOTER  -->
-    <footer>
-      <hr />
+    <footer class="bg-dark text-white-50">
       <span class="text-reset">Author: Mason Fronce</span>
-      <br />
-      <a href="https://github.com/Kitsune2468/startup">GitHub</a>
+      <a class="text-reset" href="https://github.com/Kitsune2468/startup">GitHub</a>
+      <a class="text-reset" href="https://github.com/webprogramming260/simon-css">Source</a>
     </footer>
   </body>
 </html>
