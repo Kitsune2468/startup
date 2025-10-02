@@ -30,10 +30,11 @@ menu {
   /*  overwrite Bootstrap so the menu does not wrap */
   flex-direction: row !important;
   list-style: none;
+  align-content: space-between;
 }
 
 .navbar-brand {
-  padding-left: 0.3em;
+  padding-left: 1em;
   border-bottom: solid rgb(182, 182, 182) thin;
 }
 

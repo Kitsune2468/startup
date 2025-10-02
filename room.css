@@ -3,6 +3,14 @@
     --plater2Color: #c23c3c;
 }
 
+.player1 {
+    color: var(--player1Color);
+}
+
+.player2 {
+    color: var(--plater2Color);
+}
+
 .game {
     margin-left: 5%;
     width: 50%; 
