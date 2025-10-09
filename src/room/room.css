@@ -32,7 +32,7 @@
 
 .board {
     justify-self: center;
-    background-image: url("Board.png");
+    background-image: url("/public/Board.png");
     background-position-x: 1px;
     background-size: contain;
     background-repeat: no-repeat;
