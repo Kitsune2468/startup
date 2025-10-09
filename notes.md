@@ -46,7 +46,7 @@ I also used SVG to make the background/board for the game.
 
 ## React Part 1: Routing
 
-Deployed react-ified simon. It was pretty cool to see this work, and the way everything is laid out makes sense to me.
+Deployed react-ified simon. It was pretty cool to see this work, and the way everything is laid out makes sense to me. Starting on react-ifying startup.
 
 ## React Part 2: Reactivity
 
