@@ -99,6 +99,8 @@ For this deliverable I did the following. I checked the box `[x]` and added a de
 
 ## 🚀 CSS deliverable
 
+### Everything before this was done in a previous semester, everything afterwards is current and done this semester
+
 For this deliverable I did the following. I checked the box `[x]` and added a description for things I completed.
 
 - [x] **Header, footer, and main content body** - Not sure if I'm supposed to include both the source (simon) and github in the footer, but I did it anyways just in case.
