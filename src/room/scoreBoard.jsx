@@ -1,6 +1,13 @@
 import React from 'react';
 
+import './scoreBoard.css';
+
 export function Scoreboard(props) {
+    const userName = props.userName;
+    const opposingPlayer = "Opposing Player";
+    const userColor = props.userColor;
+    const opposingColor = rgb(214, 44, 44);
+
     return (
         <div className="scoreboard"> 
             <h1 className="scoreboard-title">Scoreboard (WebSocket)</h1>

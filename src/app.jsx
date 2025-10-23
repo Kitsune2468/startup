@@ -58,7 +58,7 @@ export default function App() {
                         exact 
                     />
                     <Route path='/home' element={<Home />} />
-                    <Route path='/room' element={<Room />} />
+                    <Route path='/room' element={<Room userName={userName} />} />
                     <Route path='*' element={<NotFound />} />
                 </Routes>
 

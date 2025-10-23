@@ -1,15 +1,9 @@
-:root {
-    --player1Color: #6495ed;
-    --plater2Color: #c23c3c;
-}
-
 .player1 {
-
-    color: var(--player1Color);
+    color: rgb(49, 156, 228);
 }
 
 .player2 {
-    color: var(--plater2Color);
+    color: rgb(214, 44, 44);
 }
 
 .game {
@@ -74,13 +68,4 @@
 
 .win-loss {
     padding: 0.5em 2em;
-}
-
-section:nth-child(1) {
-    flex:1;
-    align-content: center;
-}
-
-section:nth-child(2) {
-    flex:4;
 }
