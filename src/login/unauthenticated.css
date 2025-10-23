@@ -1,0 +1,18 @@
+.login-info {
+    align-self: center;
+    display: flex;
+    flex-direction: column;
+    min-width: 375px;
+    max-width: 900px;
+    padding-left: 10%;
+    padding-right: 10%;
+    padding-top: 5%;
+    padding-bottom: 5%;
+}
+
+.login-button {
+    align-self: center;
+    width: 80%;
+    height: 100%;
+    margin-bottom: 2%;
+}
