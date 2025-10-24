@@ -1,8 +1,9 @@
-import React, { use } from 'react';
+import React from 'react';
 
 import './home.css';
 import { Button } from 'react-bootstrap';
 import { CreateRoom } from './createRoom'
+import { Link } from 'react-router-dom';
 
 export function Home(props) {
   const userName = props.userName;
@@ -22,7 +23,7 @@ export function Home(props) {
       roomsRows.push(
         <tr key = {i}>
           <td>{i}</td>
-          <td>{room.name}</td>
+          <td><Link to = {`/room/${i}`}>{room.name}</Link></td>
           <td>{room.player1}, {room.player2}</td>
         </tr>
       )
@@ -30,8 +31,8 @@ export function Home(props) {
     
   } else {
     roomsRows.push(
-      <tr key='0'>
-        <td colSpan='3'>You have no rooms!</td>
+      <tr key = '0'>
+        <td colSpan = '3'>You have no rooms!</td>
       </tr>
     )
   }

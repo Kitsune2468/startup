@@ -30,11 +30,6 @@ export default function App() {
                             )}
                             {authState === AuthState.Authenticated && (
                                 <li className="nav-item">
-                                    <NavLink className='nav-link' to="room">Room</NavLink>
-                                </li>
-                            )}
-                            {authState === AuthState.Authenticated && (
-                                <li className="nav-item">
                                     {userName}
                                 </li>
                             )}
@@ -58,7 +53,7 @@ export default function App() {
                         exact 
                     />
                     <Route path='/home' element={<Home userName={userName} />} />
-                    <Route path='/room' element={<Room userName={userName} />} />
+                    <Route path='/room/:roomID' element={<Room userName={userName} />} />
                     <Route path='*' element={<NotFound />} />
                 </Routes>
 

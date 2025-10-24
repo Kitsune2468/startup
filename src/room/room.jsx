@@ -1,22 +1,34 @@
 import React from 'react';
 import './room.css';
+import { useParams } from 'react-router-dom';
 
 export function Room(props) {
     const userName = props.userName;
-    
-    /*
-    localStorage.setItem('userColor', rgb(214, 44, 44));
-    const userColor = localStorage.userColor;
+    const { roomID } = useParams();
+    const [usersRooms, setRooms] = React.useState([]);
+    const [roomData, setRoomData] = React.useState({name: "Room not found"});
+    const [opponentName, setOpponentName] = React.useState("badName");
 
-    
-    const opposingPlayer = "Opposing Player";
-    const opposingColor = rgb(214, 44, 44);
-    */
+    React.useEffect(() => {
+        const usersRoomsText = localStorage.getItem('rooms');
+        if (usersRoomsText) {
+            //setRooms(JSON.parse(usersRoomsText))
+            const rooms = JSON.parse(usersRoomsText);
+            if(rooms.length) {
+                for (const [i, room] of rooms.entries()) {
+                    if(roomID == i) {
+                        setRoomData(room);
+                    }        
+                }
+            }
+        }
+    }, []);
 
     return (
         <main className="container-fluid bg-secondary text-center outline">
         <section className="room-title">
-            <h2>PLACEHOLDER Room 1</h2>
+            <h3>Room ID: {roomID}</h3>
+            <h3>Room Name: {roomData.name}</h3>
         </section>
         <section className="body-section">
             <div className="game"> 
@@ -50,7 +62,7 @@ export function Room(props) {
                 <h1 className="scoreboard-title">Scoreboard (WebSocket)</h1>
                 <table className="scoreboard-info">
                     <tr>
-                        <td>PLACEHOLDER <span className="player1">Player 1</span>:</td>
+                        <td><span className="player1">{roomData.player1}</span>:</td>
                         <td className="win-loss">Wins: 1</td>
                     </tr>
                     <tr>
@@ -58,7 +70,7 @@ export function Room(props) {
                         <td className="win-loss">Loses: 2</td>
                     </tr>
                     <tr>
-                        <td>PLACEHOLDER <span className="player2">Player 2</span>:</td>
+                        <td><span className="player2">{roomData.player2}</span>:</td>
                         <td className="win-loss">Wins: 2</td>
                     </tr>
                     <tr>
