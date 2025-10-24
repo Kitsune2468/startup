@@ -198,6 +198,8 @@ What will the following code using Promises output when executed?
 
 This has been intersting so far. Getting the login working took me a minute, I kept missing things, but I eventually got it working.
 
+Finally got the rooms mostly working. It took ages to figure out how to properly store and render an array of data from local storage, I was initially putting in my own room id when the storage was putting one in already. React useEffects and useStates are incredibly handy and cool.
+
 Default:
 This was a lot of fun to see it all come together. I had to keep remembering to use React state instead of just manipulating the DOM directly.
 
