@@ -1,9 +1,9 @@
 .player1 {
-    color: rgb(49, 156, 228);
+    color: rgb(106, 187, 241);
 }
 
 .player2 {
-    color: rgb(214, 44, 44);
+    color: rgb(238, 94, 94);
 }
 
 .game {
@@ -14,14 +14,21 @@
     padding-bottom:2%;
 }
 
+.room-page {
+    display: flex;
+    flex-direction: column;
+    min-width: 375px;
+  
+}
+
 .room-title {
     width: 100%;
-    height: 10%
+    height: 10%;
 }
 
 .body-section {
-    width: 100%;
-    height: 95%;
+    width: 80vmax;
+    height: 40vmax;
 }
 
 .board {
@@ -62,7 +69,8 @@
 }
 
 .scoreboard-info {
-    width:100%;
+    justify-self: center;
+    width:50%;
     height:100%;
 }
 

@@ -7,11 +7,14 @@ export function CreateRoom(props) {
     const userName = props.userName;
     const [roomName, setRoomName] = React.useState('');
     const [otherPlayerEmail, setOtherPlayerEmail] = React.useState('');
+    const defaultPlayer1Turn = true;
+    const defaultBoardInfo = [0,0,0,0,0,0,0,0,0];
 
     async function saveRoom() {
         const newRoom = {name: roomName, player1: userName, player2: otherPlayerEmail}
 
         updateRoomLocal(newRoom);
+        updatePlayersLocal(userName, otherPlayerEmail)
     }
 
     function updateRoomLocal(newRoom) {
@@ -24,6 +27,29 @@ export function CreateRoom(props) {
         rooms.push(newRoom);
 
         localStorage.setItem('rooms', JSON.stringify(rooms));
+    }
+
+    function updatePlayersLocal(player1Name, player2Name) {
+        let player1Found = false;
+        let player2Found = false;
+        let defaultColor = "rgb(200, 200, 200";
+        let players = [];
+        const playersText = localStorage.getItem('players');
+        if (playersText) {
+            players = JSON.parse(playersText);
+        }
+        for (const [i, player] of players.entries()) {
+
+        }
+
+        if(!player1Found) {
+            players.push({name: {player1Name}, color: defaultColor})
+        }
+        if(!player2Found) {
+            players.push({name: {player2Name}, color: defaultColor})
+        }
+
+        localStorage.setItem('players', JSON.stringify(players));
     }
 
     return (

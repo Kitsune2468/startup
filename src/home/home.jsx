@@ -11,6 +11,7 @@ export function Home(props) {
   const [createRoom, setCreateRoom] = React.useState(false);
 
   React.useEffect(() => {
+    //REPLACE WITH DATABASE STUFF
     const usersRoomsText = localStorage.getItem('rooms');
     if (usersRoomsText) {
       setRooms(JSON.parse(usersRoomsText))
