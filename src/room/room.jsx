@@ -11,6 +11,7 @@ export function Room(props) {
     const [opponentName, setOpponentName] = React.useState("badName");
     const [player1Color, setPlayer1Color] = React.useState("rgb(200,200,200)");
     const [player2Color, setPlayer2Color] = React.useState("rgb(200,200,200)");
+    const [isUsersTurn, setIsUsersTurn] = React.useState("false");
 
     React.useEffect(() => {
         //REPLACE WITH DATABASE STUFF
@@ -28,8 +29,14 @@ export function Room(props) {
                 setRoomData({name: "Room not found"});
             }
             if(userName === roomData.player1) {
+                if(roomData.player1Turn) {
+                    setIsUsersTurn(true);
+                }
                 setOpponentName(roomData.player2);
             } else {
+                if(!roomData.player1Turn) {
+                    setIsUsersTurn(true);
+                }
                 setOpponentName(roomData.player1);
             }
             const playersText = localStorage.getItem('players');
@@ -95,6 +102,18 @@ export function Room(props) {
         }
     }
 
+    async function makeMove(slotID) {
+
+        board = roomData.boardInfo;
+        if(userName === roomData.player1) {
+            board[i] = 1;
+        } else {
+            board[i] = 2;
+        }
+
+
+    }
+
     return (
         <main className="container-fluid bg-secondary text-center room-page">
         <section className="room-title">
@@ -105,23 +124,44 @@ export function Room(props) {
             <div className="game"> 
                 <form method="get" action="room.html">
                     <div className="board">
-                        <table className="board-grid">
-                            <tr>
-                                <td><button type="submit" className="btn btn-secondary board-button">1</button></td>
-                                <td><button type="submit" className="btn btn-secondary board-button">2</button></td>
-                                <td><button type="submit" className="btn btn-secondary board-button">3</button></td>
-                            </tr>
-                            <tr>
-                                <td><button type="submit" className="btn btn-secondary board-button">4</button></td>
-                                <td><button type="submit" className="btn btn-secondary board-button">5</button></td>
-                                <td><button type="submit" className="btn btn-secondary board-button">6</button></td>
-                            </tr>
-                            <tr>
-                                <td><button type="submit" className="btn btn-secondary board-button">7</button></td>
-                                <td><button type="submit" className="btn btn-secondary board-button">8</button></td>
-                                <td><button type="submit" className="btn btn-secondary board-button">9</button></td>
-                            </tr>
-                        </table>
+                        {isUsersTurn && (
+                            <table className="board-grid">
+                                <tr>
+                                    <td><button type="submit" className="btn btn-secondary board-button">1</button></td>
+                                    <td><button type="submit" className="btn btn-secondary board-button">2</button></td>
+                                    <td><button type="submit" className="btn btn-secondary board-button">3</button></td>
+                                </tr>
+                                <tr>
+                                    <td><button type="submit" className="btn btn-secondary board-button">4</button></td>
+                                    <td><button type="submit" className="btn btn-secondary board-button">5</button></td>
+                                    <td><button type="submit" className="btn btn-secondary board-button">6</button></td>
+                                </tr>
+                                <tr>
+                                    <td><button type="submit" className="btn btn-secondary board-button">7</button></td>
+                                    <td><button type="submit" className="btn btn-secondary board-button">8</button></td>
+                                    <td><button type="submit" className="btn btn-secondary board-button">9</button></td>
+                                </tr>
+                            </table>
+                        )}
+                        {!isUsersTurn && (
+                            <table className="board-grid">
+                                <tr>
+                                    <td><p className="board-button">1</p></td>
+                                    <td><p className="board-button">2</p></td>
+                                    <td><p className="board-button">3</p></td>
+                                </tr>
+                                <tr>
+                                    <td><p className="board-button">4</p></td>
+                                    <td><p className="board-button">5</p></td>
+                                    <td><p className="board-button">6</p></td>
+                                </tr>
+                                <tr>
+                                    <td><p className="board-button">7</p></td>
+                                    <td><p className="board-button">8</p></td>
+                                    <td><p className="board-button">9</p></td>
+                                </tr>
+                            </table>
+                        )}
                     </div>
                     <div>
                         <button type="submit" className="btn btn-primary">Make Move (WebSocket)</button>
@@ -132,7 +172,7 @@ export function Room(props) {
                 <h1 className="scoreboard-title">Scoreboard</h1>
                 <table className="scoreboard-info">
                     <tr>
-                        <td><span className="player1" style={{color:player1Color}}>{roomData.player1}</span>:</td>
+                        <td><span className="player1" style={{color:player1Color}}>X - {roomData.player1}</span>:</td>
                         <td className="win-loss">Wins: 1</td>
                     </tr>
                     <tr>
@@ -140,7 +180,7 @@ export function Room(props) {
                         <td className="win-loss">Loses: 2</td>
                     </tr>
                     <tr>
-                        <td><span className="player2" style={{color:player2Color}}>{roomData.player2}</span>:</td>
+                        <td><span className="player2" style={{color:player2Color}}>O - {roomData.player2}</span>:</td>
                         <td className="win-loss">Wins: 2</td>
                     </tr>
                     <tr>
