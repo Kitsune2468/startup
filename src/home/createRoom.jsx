@@ -11,7 +11,11 @@ export function CreateRoom(props) {
     const defaultBoardInfo = [0,0,0,0,0,0,0,0,0];
 
     async function saveRoom() {
-        const newRoom = {name: roomName, player1: userName, player2: otherPlayerEmail}
+        const newRoom = {name: roomName, 
+                        player1: userName, 
+                        player2: otherPlayerEmail, 
+                        player1Turn: defaultPlayer1Turn, 
+                        boardInfo: defaultBoardInfo}
 
         updateRoomLocal(newRoom);
         updatePlayersLocal(userName, otherPlayerEmail)
@@ -32,21 +36,26 @@ export function CreateRoom(props) {
     function updatePlayersLocal(player1Name, player2Name) {
         let player1Found = false;
         let player2Found = false;
-        let defaultColor = "rgb(200, 200, 200";
+        let defaultColor = "rgb(200, 200, 200)";
         let players = [];
         const playersText = localStorage.getItem('players');
         if (playersText) {
             players = JSON.parse(playersText);
         }
         for (const [i, player] of players.entries()) {
-
+            if(player1Name === player.name) {
+                player1Found = true;
+            }
+            if(player2Name === player.name) {
+                player2Found = true;
+            }
         }
 
         if(!player1Found) {
-            players.push({name: {player1Name}, color: defaultColor})
+            players.push({name: player1Name, color: defaultColor})
         }
         if(!player2Found) {
-            players.push({name: {player2Name}, color: defaultColor})
+            players.push({name: player2Name, color: defaultColor})
         }
 
         localStorage.setItem('players', JSON.stringify(players));

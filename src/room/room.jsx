@@ -6,8 +6,11 @@ import { useParams } from 'react-router-dom';
 export function Room(props) {
     const userName = props.userName;
     const { roomID } = useParams();
+    const defaultBoardInfo = [0,0,0,0,0,0,0,0,0];
     const [roomData, setRoomData] = React.useState({name: "Room not found"});
     const [opponentName, setOpponentName] = React.useState("badName");
+    const [player1Color, setPlayer1Color] = React.useState("rgb(200,200,200)");
+    const [player2Color, setPlayer2Color] = React.useState("rgb(200,200,200)");
 
     React.useEffect(() => {
         //REPLACE WITH DATABASE STUFF
@@ -22,13 +25,74 @@ export function Room(props) {
                     }        
                 }
             } else {
-                setRoomData({name: "Room not found"})
+                setRoomData({name: "Room not found"});
+            }
+            if(userName === roomData.player1) {
+                setOpponentName(roomData.player2);
+            } else {
+                setOpponentName(roomData.player1);
+            }
+            const playersText = localStorage.getItem('players');
+            if (playersText) {
+                //setRooms(JSON.parse(usersRoomsText))
+                const players = JSON.parse(playersText);
+                if(players.length) {
+                    for (const [i, player] of players.entries()) {
+                        if(player.name === userName) {
+                            if(userName === roomData.player1) {
+                                setPlayer1Color(player.color);
+                            } else {
+                                setPlayer2Color(player.color);
+                            }
+                        }
+                        if(player.name === opponentName) {
+                            if(opponentName === roomData.player1) {
+                                setPlayer1Color(player.color);
+                            } else {
+                                setPlayer2Color(player.color);
+                            }
+                        }
+                    }
+                }
             }
         }
     }, []);
 
     async function randomizeColor() {
+        //REPLACE WITH API CALL
+        newColor = localColorRandomizer();
+        if(userName === roomData.player1) {
+            setPlayer1Color(newColor);
+        } else {
+            setPlayer2Color(newColor);
+        }
+        setLocalPlayerColor(newColor);
+    }
 
+    function localColorRandomizer() {
+        const r = Math.floor(Math.random() * 256);
+        const g = Math.floor(Math.random() * 256);
+        const b = Math.floor(Math.random() * 256);
+
+        return `rgb(${r}, ${g}, ${b})`;
+    }
+
+    async function setLocalPlayerColor(newColor) {
+        let players = [];
+        const playersText = localStorage.getItem('players');
+        if (playersText) {
+            //setRooms(JSON.parse(usersRoomsText))
+            players = JSON.parse(playersText);
+            if(players.length) {
+                for (const [i, player] of players.entries()) {
+                    if(player.name === userName) {
+                        players.splice(i, 0, {name: player.name, color: newColor});
+                        break;
+                    }
+                }
+            }
+            localStorage.setItem('players', JSON.stringify(players));
+        }
     }
 
     return (
@@ -68,7 +132,7 @@ export function Room(props) {
                 <h1 className="scoreboard-title">Scoreboard</h1>
                 <table className="scoreboard-info">
                     <tr>
-                        <td><span className="player1">{roomData.player1}</span>:</td>
+                        <td><span className="player1" style={{color:player1Color}}>{roomData.player1}</span>:</td>
                         <td className="win-loss">Wins: 1</td>
                     </tr>
                     <tr>
@@ -76,7 +140,7 @@ export function Room(props) {
                         <td className="win-loss">Loses: 2</td>
                     </tr>
                     <tr>
-                        <td><span className="player2">{roomData.player2}</span>:</td>
+                        <td><span className="player2" style={{color:player2Color}}>{roomData.player2}</span>:</td>
                         <td className="win-loss">Wins: 2</td>
                     </tr>
                     <tr>
