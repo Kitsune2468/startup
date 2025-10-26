@@ -200,27 +200,4 @@ This has been intersting so far. Getting the login working took me a minute, I k
 
 Finally got the rooms mostly working. It took ages to figure out how to properly store and render an array of data from local storage, I was initially putting in my own room id when the storage was putting one in already. React useEffects and useStates are incredibly handy and cool.
 
-Default:
-This was a lot of fun to see it all come together. I had to keep remembering to use React state instead of just manipulating the DOM directly.
-
-Handling the toggling of the checkboxes was particularly interesting.
-
-```jsx
-<div className="input-group sound-button-container">
-  {calmSoundTypes.map((sound, index) => (
-    <div key={index} className="form-check form-switch">
-      <input
-        className="form-check-input"
-        type="checkbox"
-        value={sound}
-        id={sound}
-        onChange={() => togglePlay(sound)}
-        checked={selectedSounds.includes(sound)}
-      ></input>
-      <label className="form-check-label" htmlFor={sound}>
-        {sound}
-      </label>
-    </div>
-  ))}
-</div>
-```
+Passing info to child components took a while to figure out, but once I did they were really useful.

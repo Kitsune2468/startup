@@ -122,8 +122,8 @@ For this deliverable I did the following. I checked the box `[x]` and added a de
 
 For this deliverable I did the following. I checked the box `[x]` and added a description for things I completed.
 
-- [ ] **All functionality implemented or mocked out** - I did not complete this part of the deliverable.
-- [ ] **Hooks** - I did not complete this part of the deliverable.
+- [x] **All functionality implemented or mocked out** - Took forever, but implemented creating rooms, making moves, and randomizing your color.
+- [x] **Hooks** - Used useEffect in home.jsx and room.jsx. Used multiple useState hooks in home.jsx, createRoom.jsx, room.jsx, and app.jsx (I think I got all of them, but might have missed some places where I used them.)
 
 ## 🚀 Service deliverable
 
