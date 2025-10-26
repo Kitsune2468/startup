@@ -1,11 +1,3 @@
-.player1 {
-    
-}
-
-.player2 {
-    
-}
-
 .game {
     justify-self: center;
     width: 50%; 
@@ -24,6 +16,15 @@
 .room-title {
     width: 100%;
     height: 10%;
+    margin-bottom: 5%;
+}
+
+.room-name {
+    justify-self: center;
+    margin-top: 5%;
+    width: 20%;
+    padding-bottom: 1%;
+    border-bottom: solid;
 }
 
 .body-section {

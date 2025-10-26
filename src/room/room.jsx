@@ -180,8 +180,7 @@ export function Room(props) {
     return (
         <main className="container-fluid bg-secondary text-center room-page">
         <section className="room-title">
-            <h3>Room ID: {roomID}</h3>
-            <h3>Room Name: {roomData.name}</h3>
+            <h3 className="room-name">Room: {roomData.name}</h3>
         </section>
         <section className="body-section">
             <div className="game"> 
@@ -346,9 +345,6 @@ export function Room(props) {
                             {!isUsersTurn === true && (
                                 <p>Not your turn.</p>
                             )}
-                            <Button variant='dark' onClick={() => resetBoard()}>
-                                Reset Board (For testing)
-                            </Button>
                         </div>
                     </div>
                 </form>

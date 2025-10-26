@@ -1,10 +1,8 @@
 .home-page {
     display: flex;
     flex-direction: column;
-    min-width: 375px;
     justify-content: space-between;
     align-content: space-evenly;
-    padding: 15%;
 }
 
 .login-info {

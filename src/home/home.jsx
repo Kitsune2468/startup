@@ -46,6 +46,13 @@ export function Home(props) {
     }
   }
 
+  function refreshHome() {
+    setCreateRoom(false);
+    const usersRoomsText = localStorage.getItem('rooms');
+    if (usersRoomsText) {
+      setRooms(JSON.parse(usersRoomsText))
+    }
+  }
 
   return (
     <main className="container-fluid bg-secondary text-center">
@@ -63,7 +70,8 @@ export function Home(props) {
           </table>
           {createRoom === true && (
             <CreateRoom
-              userName = {userName}
+              passedUserName = {userName}
+              refreshHomePage = {refreshHome}
               />
           )}
           {createRoom === false && (

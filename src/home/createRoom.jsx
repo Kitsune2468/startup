@@ -3,8 +3,8 @@ import React from 'react';
 import { Button } from 'react-bootstrap';
 import './createRoom.css';
 
-export function CreateRoom(props) {
-    const userName = props.userName;
+export function CreateRoom({passedUserName, refreshHomePage}) {
+    const userName = passedUserName;
     const [roomName, setRoomName] = React.useState('');
     const [otherPlayerEmail, setOtherPlayerEmail] = React.useState('');
     const defaultPlayer1Turn = true;
@@ -20,7 +20,8 @@ export function CreateRoom(props) {
                         boardInfo: defaultBoardInfo}
 
         updateRoomLocal(newRoom);
-        updatePlayersLocal(userName, otherPlayerEmail)
+        updatePlayersLocal(userName, otherPlayerEmail);
+        refreshHomePage();
     }
 
     function updateRoomLocal(newRoom) {
