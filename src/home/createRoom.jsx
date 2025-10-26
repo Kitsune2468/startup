@@ -13,7 +13,9 @@ export function CreateRoom(props) {
     async function saveRoom() {
         const newRoom = {name: roomName, 
                         player1: userName, 
-                        player2: otherPlayerEmail, 
+                        player1Wins: 0,
+                        player2: otherPlayerEmail,
+                        player2Wins: 0, 
                         player1Turn: defaultPlayer1Turn, 
                         boardInfo: defaultBoardInfo}
 

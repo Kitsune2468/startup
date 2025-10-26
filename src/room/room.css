@@ -34,29 +34,48 @@
 .board {
     justify-self: center;
     background-image: url("/Board.png");
-    background-position-x: 1px;
-    background-size: contain;
+    background-position-y: 0px;
+    background-size:cover;
     background-repeat: no-repeat;
     aspect-ratio: 1 / 1;
-    width: 80%;
-    height: 80%;
+    width: 40vmin;
+    height: 40vmin;
     min-width: 200px;
     min-height: 200px;
-    max-height: 80vmin;
-    max-width: 80vmin;
+    max-height: 90vmin;
+    max-width: 90vmin;
+    
 }
 
 .board-grid {
-    align-content: center;
-    justify-content: center;
-    height: 100%;
-    width: 100%;
+    width: 40vmin;
+    height: 40vmin;
+    min-width: 200px;
+    min-height: 200px;
+    max-height: 90vmin;
+    max-width: 90vmin;
+    align-content: space-evenly;
+    justify-content: space-evenly;
 }
 
 .board-button {
-    height: 80%;
-    width: 80%;
+    align-content: center;
+    width: 10vmin;
+    height: 10vmin;
+    aspect-ratio: 1 / 1;
+    font-size: x-large;
 }
+
+.board-tile-text {
+    align-content: center;
+    width: 10vmin;
+    height: 10vmin;
+    margin: 1.25vmin;
+    margin-left: 1.5vmin;
+    aspect-ratio: 1 / 1;
+    font-size: larger;
+}
+
 .scoreboard-title {
     justify-self: center;
     width: 75%;
